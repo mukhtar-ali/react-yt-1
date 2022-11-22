@@ -10,13 +10,26 @@ import SignUp from "./components/pages/SignUp";
 function App() {
 	return (
 		<>
-			<Router>
+			<Router basename={"/react-yt-1"}>
 				<Navbar />
 				<Routes>
-					<Route path="/" excat element={<Home />} />
-					<Route path="/services" element={<Services />} />
-					<Route path="/products" element={<Products />} />
-					<Route path="/SignUp" element={<SignUp />} />
+					<Route
+						path={`${process.env.PUBLIC_URL}/`}
+						excat
+						element={<Home />}
+					/>
+					<Route
+						path={`${process.env.PUBLIC_URL}/services`}
+						element={<Services />}
+					/>
+					<Route
+						path={`${process.env.PUBLIC_URL}/products`}
+						element={<Products />}
+					/>
+					<Route
+						path={`${process.env.PUBLIC_URL}/SignUp`}
+						element={<SignUp />}
+					/>
 				</Routes>
 			</Router>
 		</>
