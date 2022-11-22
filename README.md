@@ -1,6 +1,7 @@
 # Live Preview
 
 You can see a working live preview through that link [Live Preview](https://react-yt-1.herokuapp.com/).
+based on [This Tutorial](https://www.youtube.com/watch?v=I2UBjN5ER4s)
 
 # Getting Started with Create React App
 
