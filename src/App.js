@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import Home from "./components/pages/Home";
 import Services from "./components/pages/Services";
@@ -13,23 +13,10 @@ function App() {
 			<Router basename={"/react-yt-1"}>
 				<Navbar />
 				<Routes>
-					<Route
-						path={`${process.env.PUBLIC_URL}/`}
-						excat
-						element={<Home />}
-					/>
-					<Route
-						path={`${process.env.PUBLIC_URL}/services`}
-						element={<Services />}
-					/>
-					<Route
-						path={`${process.env.PUBLIC_URL}/products`}
-						element={<Products />}
-					/>
-					<Route
-						path={`${process.env.PUBLIC_URL}/SignUp`}
-						element={<SignUp />}
-					/>
+					<Route path="/" excat element={<Home />} />
+					<Route path="/services" element={<Services />} />
+					<Route path="/products" element={<Products />} />
+					<Route path="/SignUp" element={<SignUp />} />
 				</Routes>
 			</Router>
 		</>
