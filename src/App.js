@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import Home from "./components/pages/Home";
 import Services from "./components/pages/Services";
@@ -10,7 +10,7 @@ import SignUp from "./components/pages/SignUp";
 function App() {
 	return (
 		<>
-			<Router basename={"/react-yt-1"}>
+			<Router basename={window.location.pathname || ""}>
 				<Navbar />
 				<Routes>
 					<Route path="/" excat element={<Home />} />
