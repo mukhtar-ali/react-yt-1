@@ -1,5 +1,17 @@
+[phases.setup]
+nixPkgs = ["nodejs", "coreutils"]
+
+[phases.install]
+cmds = ["npm ci"]
+
 [phases.build]
-cmds = ["npm ci", "npm run build"]
+cmds = ["npm run build"]
+
+[phases.deploy]
+cmds = [
+  "rm -rf /usr/share/nginx/html/*",
+  "cp -r build/* /usr/share/nginx/html/"
+]
 
 [start]
-cmd = "cp -r build/* /usr/share/nginx/html && nginx -g 'daemon off;'"
+cmd = "nginx -g 'daemon off;'"
