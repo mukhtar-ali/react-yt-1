@@ -1,3 +1,5 @@
+# nixpacks.toml
+
 [phases.setup]
 nixPkgs = ["nodejs", "coreutils"]
 
@@ -10,7 +12,7 @@ cmds = ["npm run build"]
 [phases.deploy]
 cmds = [
   "rm -rf /usr/share/nginx/html/*",
-  "cp -r build/* /usr/share/nginx/html/"
+  "cp -r ./build/* /usr/share/nginx/html/"
 ]
 
 [start]
